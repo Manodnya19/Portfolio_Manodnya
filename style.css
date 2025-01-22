@@ -377,29 +377,57 @@ article .icon {
 /* PROJECTS SECTION */
 
 #projects {
-  position: relative;
+  padding: 2rem;
 }
 
-.color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+.scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding-bottom: 1rem;
+}
+
+.details-container {
+  flex: 0 0 calc(33.33% - 2rem);
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 1rem;
+  scroll-snap-align: start;
+  text-align: center;
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 .project-title {
-  margin: 1rem;
-  color: black;
+  margin: 1rem 0;
+  font-size: 1.2rem;
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
+
+.project-btn:hover {
+  background: #0056b3;
+}
+
+/* Hide scrollbar for better aesthetics */
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 
 /* CONTACT */
 
